@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Untukmu, Apri Jonita Yenda</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+      color: #fff;
+      text-align: center;
+      overflow: hidden;
+      animation: bg-animation 10s infinite alternate;
+    }
+
+    @keyframes bg-animation {
+      0% { background: linear-gradient(45deg, #ff9a9e, #fad0c4); }
+      50% { background: linear-gradient(45deg, #fbc2eb, #a6c1ee); }
+      100% { background: linear-gradient(45deg, #ff9a9e, #fad0c4); }
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-top: 50px;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    .slideshow {
+      max-width: 600px;
+      margin: 30px auto;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .slide {
+      font-size: 1.5em;
+      line-height: 1.8;
+      font-style: italic;
+      color: #fff;
+      display: none;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    .gif {
+      margin: 20px 0;
+    }
+
+    img {
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    button {
+      background-color: #d23669;
+      color: #fff;
+      font-size: 1em;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      margin-top: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s, background-color 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background-color: #ff5e7e;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Untukmu, Apri Jonita Yenda</h1>
+  <div class="slideshow">
+    <div class="slide active">
+      "Cintaku untukmu, Apri Jonita Yenda, adalah sesuatu yang tak bisa aku gambarkan dengan kata-kata biasa. Setiap detik bersamamu adalah keajaiban, dan aku bersyukur kepada Tuhan telah menghadirkanmu di hidupku."
+    </div>
+    <div class="slide">
+      "Aku ingin melihat senyummu setiap pagi, mendengar tawamu setiap hari, dan menggenggam tanganmu sepanjang perjalanan hidup ini. Kamu adalah anugerah terbesar yang pernah kumiliki."
+    </div>
+    <div class="slide">
+      "Bersama kamu, aku menemukan arti sejati dari cinta dan komitmen. Aku tidak hanya mencintaimu hari ini, tetapi untuk setiap hari yang akan datang."
+    </div>
+    <div class="slide">
+      "Dengan segala kerendahan hati, aku ingin meminta satu hal darimu: Maukah kamu menjadi pendamping hidupku? Aku ingin menikahimu dan membangun masa depan yang indah bersama."
+    </div>
+  </div>
+  <div class="gif">
+    <img src="https://media1.tenor.com/m/uYzpJPlXq2sAAAAC/lovelovelove.gif" alt="Romantis" width="300">
+  </div>
+  <button onclick="showNextSlide()">Ganti Kata-Kata</button>
+  <audio autoplay loop>
+    <source src="lagu_nadif_basalamah.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung pemutar audio.
+  </audio>
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showNextSlide() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+  </script>
+</body>
+</html>
